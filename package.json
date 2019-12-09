@@ -1,0 +1,17 @@
+{
+  "name": "koye-api",
+  "version": "1.0.0",
+  "description": "koye api ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node restful api"
+  },
+  "keywords": [
+    "koye"
+  ],
+  "author": "mingjian piao",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
