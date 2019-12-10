@@ -4,39 +4,16 @@ const router = express.Router();
 const HotStore = require('../../models/hotstore');
 const mongoose = require('mongoose');
 
+
 router.get('/', (req, res, next) => {
-
-    HotStore.find().sort({priority:1})
-    .exec()
-    .then(docs => {
-      const response = {
-        count: docs.length,
-        hotstores: docs.map(doc => {
-          return {
-            result:doc,
-            request: {
-              type: "GET",
-              url: process.env.URL+"/main"+ doc._id
-            }
-          };
-        })
-      };
-
-      res.status(200).json(response);
-  
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json({
-        error: err
-      });
+    res.status(200).json({
+        message: "Here we are handling the get request for the products"
     });
 });
 
-
 router.post('/', (req, res, next) => {
 
-        const store = new Store({
+        const store = new HotStore({
         _id: new mongoose.Types.ObjectId(),
         name:"강남",
         phone:"2132160585",
@@ -72,6 +49,7 @@ router.get('/:id', (req, res, next) => {
         message: id
     });
 });
+
 
 
 module.exports = router;

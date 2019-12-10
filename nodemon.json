@@ -1,0 +1,6 @@
+{
+   "env":{
+   "MONGO_ATLAS_PW":"Audrjs0929",
+   "URL":"http://localhost:3000"
+   }
+}
