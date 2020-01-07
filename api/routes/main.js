@@ -40,17 +40,19 @@ router.post('/', (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         name:"강남",
         phone:"2132160585",
-        rate: 5,
-        address:"10533 Willow Lane, Santa Fe Springs,CA",
-        review:13,
-        img:"img",
-        open:"11am",
-        close:"11pm",
+        address:"10533 Willow Lane",
+        city:"Santa Fe Springs",
+        state:"CA",
+        zipcode:"90670",
+        img:[],
+        main_image:"",
+        open:11,
+        close:23,
         category:"Restaurant",
-        latitude:"11.11",
-        longtitude:"12.12",
         menu:["막창","곱창","순대","양고기","불고기","쇠고기","돼지고기"],
-        priority:10
+        priority:10,
+        review:[],
+        rate: 5,
     });
 
      store.save().then(result=>{

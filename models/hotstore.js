@@ -1,20 +1,23 @@
 const mongoose = require('mongoose');
 
 const storeSchema = mongoose.Schema({
+    
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
-    phone:String,
-    rate: Number,
+    phone:String,   
     address:String,
-    review:Number,
-    img:String,
-    open:String,
-    close:String,
+    city:String,
+    state:String,
+    zipcode:String,
+    img:Array,
+    main_img:String,
+    open:Number,
+    close:Number,
     category:String,
-    latitude:String,
-    longtitude:String,
     menu:Array,
-    priority:Number
+    priority:Number,
+    review:Array,
+    rate: Number,
 })
 
-module.exports = mongoose.model('HotStore',storeSchema);
+module.exports = mongoose.model('Hot_Store',storeSchema);
